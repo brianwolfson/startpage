@@ -34,8 +34,9 @@ iframe {
   }
 }
 
+
 .mainCard {
-  width: 50%;
+  width: 70%;
   background-color: #5b6230;
   opacity: .9;
   z-index: 1000;
@@ -45,6 +46,12 @@ iframe {
   transform: translate(-50%, -50%);
   left: 50%;
   top: 50%;
+}
+
+@media (min-width: 1920px) {
+  .mainCard {
+    width: 50%;
+  }
 }
 
 .infoHeader p {
