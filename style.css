@@ -74,6 +74,7 @@ iframe {
 .linkRow h4 {
   color: #E7D27C;
   font-weight: bold;
+  margin: .125em 0em;
 }
 
 .linkItem {
@@ -110,6 +111,52 @@ iframe {
   color: #E7D27C;
 }
 
-.linkRow h4 {
-  margin: .125em 0em;
+.redditSearch {
+  margin-top: 2em;
+  border-radius: 0;
+}
+
+#btnSearch {
+  color: #fff;
+  border-color: transparent;
+}
+
+.form-control:focus {
+  outline: none !important;
+  box-shadow: none;
+}
+
+#btnSearch:hover {
+  background-color: transparent;
+  color: #fff;
+  border-color: transparent;
+}
+
+.input-group-text {
+  background-color: transparent;
+  color: #fff;
+  border-color: transparent;
+  font-weight: bold;
+}
+
+.form-control {
+  background-color: transparent;
+  border-top: transparent;
+  border-left: transparent;
+  border-right: transparent;
+  border-bottom: #E7D27C 2px solid;
+  
+}
+
+.form-control:focus {
+  background-color: transparent;
+  border-bottom: #e7d27c 2px solid;
+}
+
+.form-control:focus::placeholder {
+  color: #E7D27C;
+}
+
+.form-control::placeholder {
+  color: #E7D27C;
 }

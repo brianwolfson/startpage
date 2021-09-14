@@ -55,13 +55,22 @@ function greeting() {
 	}
 }
 
-$(".panel-heading").parent('.panel').hover(
-  function() {
-    $(this).children('.collapse').collapse('show');
-  }, function() {
-    $(this).children('.collapse').collapse('hide');
-  }
-);
+
+var button = document.getElementById("btnSearch");
+
+button.onclick = function () {
+var text = document.getElementById("textBoxEl").value;
+window.open("http://reddit.com/r/" + text,"_self");
+}
+
+var input = document.getElementById("textBoxEl");
+input.addEventListener("keyup", function(event) {
+    if (event.keyCode === 13) {
+        event.preventDefault();
+        document.getElementById("btnSearch").click();
+    }
+});
+
 
 checkTime();
 greeting()
