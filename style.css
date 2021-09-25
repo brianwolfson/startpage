@@ -36,7 +36,7 @@ iframe {
 
 .mainCard {
   width: 70%;
-  background-color: #5b6230;
+  background-color: #90431b;
   opacity: .9;
   z-index: 1000;
   color: #fff;
@@ -46,6 +46,8 @@ iframe {
   left: 50%;
   top: 50%;
 }
+
+/* 5b6230 */
 
 @media screen and (min-width: 1921px) {
   .mainCard {
@@ -145,7 +147,6 @@ iframe {
   border-left: transparent;
   border-right: transparent;
   border-bottom: #E7D27C 2px solid;
-  
 }
 
 .form-control:focus {
