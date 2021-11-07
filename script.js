@@ -1,77 +1,84 @@
-function checkTime(i) {
-  if (i < 10) {
-    i = "0" + i;
-  }
-  return i;
-}
+function showTime(){
+    var date = new Date();
+    var h = date.getHours();
+    var m = date.getMinutes();
+    var session = "AM";
 
-function startTime() {
-  var today = new Date();
-  var h = today.getHours();
-  var m = today.getMinutes();
-  var amPM = (h > 11) ? "PM" : "AM";
-
-  if (h > 12) {
-    h -= 12;
-    } else if (h === 0) {
-       h = 12;
+    if(h == 0){
+        h = 12;
     }
-  // add a zero in front of numbers<10
-  m = checkTime(m);
-  document.getElementById('time').innerHTML = h + ":" + m + " " + amPM;
-  t = setTimeout(function() {
-    startTime()
-  }, 500);
 
-  var dateOptions = {
-    weekday: "long",
-    month: "long",
-    day: "numeric"
-  }
+    if(h > 12){
+        h = h - 12;
+        session = "PM";
+    }
 
-  var date = today.toLocaleDateString("en-US", dateOptions);
-  document.getElementById("headerDate").innerHTML = date;
+    h = (h < 10) ? "0" + h : h;
+    m = (m < 10) ? "0" + m : m;
+
+    var time = h + ":" + m + " " + session;
+    document.getElementById("clock").innerText = time;
+    document.getElementById("clock").textContent = time;
+
+    setTimeout(showTime, 1000);
 }
 
 function greeting() {
   var h = new Date().getHours();
 
 	if (h >= 6 && h < 12) {
-		document.getElementById('greeting').innerHTML = "Good morning, Brian!";
+		document.getElementById('greeting').innerHTML = "good morning, brian";
+    document.title = "good morning, brian";
 
 	} else if (h >= 12 && h < 17) {
-		document.getElementById('greeting').innerHTML = "Good afternoon, Brian!";
+		document.getElementById('greeting').innerHTML = "good afternoon, brian";
+    document.title = "good afternoon, brian";
 
 	} else if (h >= 17 && h < 22) {
-		document.getElementById('greeting').innerHTML = "Good evening, Brian!";
+		document.getElementById('greeting').innerHTML = "good evening, brian";
+    document.title = "good evening, brian";
 	}
 
   else if (h >= 22 && h < 24) {
-		document.getElementById('greeting').innerHTML = "Good night, Brian!";
+		document.getElementById('greeting').innerHTML = "good night, brian";
+    document.title = "good night, brian";
 	}
 
   else if (h >= 0 && h < 6 ) {
-		document.getElementById('greeting').innerHTML = "Good night, Brian!";
+		document.getElementById('greeting').innerHTML = "good night, brian";
+    document.title = "good night, brian";
 	}
 }
 
+function showDate() {
+  var d = new Date();
+  var day = d.getDate();
+  if (day <= 9)
+    day = "0" + day;
+  var month = d.getMonth() + 1;
+  if (month <= 9)
+    month = "0" + month;
+  var year = d.getFullYear();
+  var currentDate = month + "/" + day + "/" + year;
 
-var button = document.getElementById("btnSearch");
-
-button.onclick = function () {
-var text = document.getElementById("textBoxEl").value;
-window.open("http://reddit.com/r/" + text,"_self");
+  document.getElementById("currentDate").innerText = currentDate;
 }
 
-var input = document.getElementById("textBoxEl");
-input.addEventListener("keyup", function(event) {
-    if (event.keyCode === 13) {
-        event.preventDefault();
-        document.getElementById("btnSearch").click();
-    }
-});
+var printQuote = () => {
+  let api = `https://api.quotable.io/random`;
 
+  fetch(api)
+    .then(function (response) {
+      let data = response.json();
+      return data;
+    })
+    .then(function (data) {
+	  quote.innerHTML = `"${ data.content }"`;
+	  if (data.author != null) quoteAuthor.innerHTML = `- ${ data.author }`;
+	});
+};
 
-checkTime();
-greeting()
-startTime();
+printQuote();
+showTime();
+greeting();
+showDate();
