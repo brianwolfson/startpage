@@ -6,8 +6,9 @@ body {
 
 .container {
   margin-left: 10%;
-  margin-top: 2.5%;
   width: 80%;
+  height: 80vh;
+  margin-top: 10vh;
   display: grid;
   grid-template-columns: 35% 65% ;
 }
@@ -15,8 +16,9 @@ body {
 @media screen and (min-width: 1921px) {
   .container {
     margin-left: 20%;
-    margin-top: 5%;
     width: 60%;
+    height: 80vh;
+    margin-top: 10vh;
   }
 }
 
