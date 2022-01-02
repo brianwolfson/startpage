@@ -1,80 +1,88 @@
 <!doctype html>
+
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 
-    <!-- Bootstrap CSS -->
-    <link href="style.css" rel="stylesheet">
+  <title><div id="greeting"></div></title>
 
-    <title><div id="greeting"></div></title>
-  </head>
-  <body>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,500;1,300&display=swap" rel="stylesheet">
 
-    <div class="container">
+  <link rel="icon" href="favicon.png">
 
-      <div class="col">
-        <img src="img/image.jpg">
-      </div>
+</head>
 
-      <div class="col rightCol">
-        <div class="header">
-          <div id="clock" class="clock" onload="showTime()"></div>
-          <div class="flexContainer">
-            <div id="greeting"></div>
-            <div id="currentDate"></div>
-          </div>
-          <hr>
-        </div>
+<body>
 
-        <div class="containerWrapper">
-        <div class="linkContainer">
+  <video id="background-video" autoplay loop muted poster="preview.jpg">
+    <source src="bgvideo.mp4" type="video/mp4">
+  </video>
 
-          <div class="col listCol">
-            <h3 style="color: #e06c75" class="linkHeader">entertainment</h3>
-            <ul class=linkList>
-              <li><a href="https://www.reddit.com/">reddit</a></li>
-              <li><a href="https://www.reddit.com/user/snipps_/m/lifestyle/">/m/lifestyle</a></li>
-              <li><a href="https://www.youtube.com/">youtube</a></li>
-              <li><a href="https://twitter.com/home">twitter</a></li>
-            </ul>
-          </div>
+  <div class="container">
+    <h1 class="welcome">Welcome</h1>
+    <div class="topRow">
+      <div id="clock" class="clock" onload="showTime()"></div>
+      <div id="currentDate"></div>
+    </div>
 
-          <div class="col listCol">
-            <h3 style="color: #e5c07b" class="linkHeader">productivity</h3>
-            <ul class=linkList>
-              <li><a href="https://mail.google.com/mail/u/0/#inbox">mail</a></li>
-              <li><a href="https://drive.google.com/drive/u/0/my-drive">drive</a></li>
-              <li><a href="https://calendar.google.com/calendar/u/0/r?tab=oc&pli=1">calendar</a></li>
-              <li><a href="https://medium.com/">medium</a></li>
-            </ul>
-          </div>
+    <div class="cardRow">
+      <div class="col-4">
 
-          <div class="col listCol">
-            <h3 style="color: #61afef" class="linkHeader">misc</h3>
-            <ul class=linkList>
-              <li><a href="https://dias.bank.truist.com/ui/login?redirecturi=/web/home">truist</a></li>
-              <li><a href="https://studentloans.discover.com/MFA/EnterUsername.aspx?ReturnUrl=%2fMFA%2fAspSessionEstablisher.aspx%3fmsg%3dAMA&msg=AMA">student loans</a></li>
-              <li><a href="https://steamcommunity.com/app/255710/workshop/">workshop</a></li>
-              <li><a href="https://brianwolfson.com/">webite</a></li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="quoteBlock">
-          <div id="quote"></div>
-          <div id="quoteAuthor"></div>
+        <div class="cardInner">
+          <ul class="linkList">
+            <li class="linkItem"><a href="https://www.youtube.com/">Youtube</a></li>
+            <li class="linkItem"><a href="https://twitter.com/home">Twitter</a></li>
+            <li class="linkItem"><a href="https://www.reddit.com">Reddit</a></li>
+            <li class="linkItem"><a href="https://www.reddit.com/user/snipps_/m/lifestyle/">/m/lifestyle</a></li>
+          </ul>
         </div>
 
       </div>
+
+      <div class="col-4">
+
+        <div class="cardInner">
+          <ul class="linkList">
+            <li class="linkItem"><a href="https://mail.google.com/mail/u/0/#inbox">Mail</a></li>
+            <li class="linkItem"><a href="https://drive.google.com/drive/u/0/my-drive">Drive</a></li>
+            <li class="linkItem"><a href="https://calendar.google.com/calendar/u/0/r?tab=oc&pli=1">Calendar</a></li>
+            <li class="linkItem"><a href="https://sites.google.com/d/1x1BLUCGvFu_5hivjILcHPmMyNEOoyLKq/p/1wVh-lPHcoKp3m5oPox0hwd7ew5W1JOGx/edit">GovBrunswick</a></li>
+            <li class="linkItem"><a href="https://sites.google.com/jstreet.org/wiki/home">JStreet Wiki</a></li>
+          </ul>
+        </div>
+
       </div>
+
+      <div class="col-4">
+
+        <div class="cardInner">
+          <ul class="linkList">
+            <li class="linkItem"><a href="https://dias.bank.truist.com/ui/login?redirecturi=/web/home">Online Banking</a></li>
+            <li class="linkItem"><a href="https://splashfinancial.firstmarkservices.com">Student Loans</a></li>
+            <li class="linkItem"><a href="https://unbury.me">Debt Tracker</a></li>
+            <li class="linkItem"><a href="https://steamcommunity.com/app/255710/workshop/">Workshop</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="quoteRow">
+
+      <span id="quote"></span>
+      <span id="quoteAuthor"></span>
 
     </div>
-    <script src="script.js"></script>
-  </body>
+
+  </div>
+
+  <div class="hiddenGreeting" id="greeting"></div>
+
+  <script src="script.js"></script>
+</body>
 </html>
