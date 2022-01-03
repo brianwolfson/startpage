@@ -19,12 +19,20 @@ html {
 }
 
 .container {
-  width: 60%;
-  margin-left: 20%;
-  margin-top: 0;
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 30%;
 }
 
-@media screen and (min-width: 1921px) {
+@media screen and (min-width: 1080px) {
+  .container {
+    width: 60%;
+    margin-left: 20%;
+    margin-top: 0;
+  }
+}
+
+@media screen and (min-width: 1920px) {
   .container {
     width: 40%;
     margin-top: 7.5%;
