@@ -18,10 +18,40 @@ html {
   z-index: -1;
 }
 
+.quoteRow {
+  margin: 7.5% 4% 5%;
+  font-size: 20px;
+  font-weight: 400;
+  text-align: justify;
+  display: inline-block;
+  flex-wrap: wrap;
+}
+
+#quote {
+  width: max-content;
+}
+
+#quoteAuthor {
+  padding-left: .25em;
+  width: max-content;
+  font-weight: 300;
+  font-style: italic;
+  color: #bdbdbd;
+}
+
 .container {
   width: 90%;
   margin-left: 5%;
   margin-top: 30%;
+}
+
+@media screen and (max-height: 900px) {
+  .container {
+    margin-top: 7.5%;
+  }
+  .quoteRow {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 1080px) {
@@ -58,27 +88,6 @@ html {
 .cardRow {
   display: grid;
   grid-template-columns: 33% 34% 33%;
-}
-
-.quoteRow {
-  margin: 7.5% 4% 5%;
-  font-size: 20px;
-  font-weight: 400;
-  text-align: justify;
-  display: inline-block;
-  flex-wrap: wrap;
-}
-
-#quote {
-  width: max-content;
-}
-
-#quoteAuthor {
-  padding-left: .25em;
-  width: max-content;
-  font-weight: 300;
-  font-style: italic;
-  color: #bdbdbd;
 }
 
 .col-4 {
