@@ -27,58 +27,28 @@ function greeting() {
   var h = new Date().getHours();
 
 	if (h >= 6 && h < 12) {
-		document.getElementById('greeting').innerHTML = "good morning, brian";
-    document.title = "good morning, brian";
+		document.getElementById('greeting').innerHTML = "Good morning, Brian";
+    document.title = "Good morning, Brian";
 
 	} else if (h >= 12 && h < 17) {
-		document.getElementById('greeting').innerHTML = "good afternoon, brian";
-    document.title = "good afternoon, brian";
+		document.getElementById('greeting').innerHTML = "Good afternoon, Brian";
+    document.title = "Good afternoon, Brian";
 
 	} else if (h >= 17 && h < 22) {
-		document.getElementById('greeting').innerHTML = "good evening, brian";
-    document.title = "good evening, brian";
+		document.getElementById('greeting').innerHTML = "Good evening, Brian";
+    document.title = "Good evening, Brian";
 	}
 
   else if (h >= 22 && h < 24) {
-		document.getElementById('greeting').innerHTML = "good night, brian";
-    document.title = "good night, brian";
+		document.getElementById('greeting').innerHTML = "Good night, Brian";
+    document.title = "Good night, Brian";
 	}
 
   else if (h >= 0 && h < 6 ) {
-		document.getElementById('greeting').innerHTML = "good night, brian";
-    document.title = "good night, brian";
+		document.getElementById('greeting').innerHTML = "Good night, Brian";
+    document.title = "Good night, Brian";
 	}
 }
 
-function showDate() {
-  var d = new Date();
-  var day = d.getDate();
-  if (day <= 9)
-    day = "0" + day;
-  var month = d.getMonth() + 1;
-  if (month <= 9)
-    month = "0" + month;
-  var year = d.getFullYear();
-  var currentDate = month + "/" + day + "/" + year;
-
-  document.getElementById("currentDate").innerText = currentDate;
-}
-
-var printQuote = () => {
-  let api = `https://api.quotable.io/random`;
-
-  fetch(api)
-    .then(function (response) {
-      let data = response.json();
-      return data;
-    })
-    .then(function (data) {
-	  quote.innerHTML = `"${ data.content }"`;
-	  if (data.author != null) quoteAuthor.innerHTML = `- ${ data.author }`;
-	});
-};
-
-printQuote();
 showTime();
 greeting();
-showDate();
