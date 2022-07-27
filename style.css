@@ -1,5 +1,5 @@
 :root {
-  --green: #1f513f;
+  --green: #004833;
   --tan: #e8e0ce;
   --orange: #d58258;
   --beige: #ebba84;
@@ -64,7 +64,7 @@ body {
 .clock {
   text-align: center;
   font-family: Merriweather-Black;
-  font-size: 6rem;
+  font-size: 7.5rem;
 }
 
 .linksCol {
